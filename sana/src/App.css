@@ -78,7 +78,24 @@ body {
   outline: none; /* Remove default focus outline */
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items */
+  }
 
+  .navbar li {
+    width: 100%; /* Make list items full width */
+    text-align: center; /* Center text in list items */
+  }
+
+  .navbar a, 
+  .navbar button {
+    width: 50%; /* Full width buttons */
+    padding: 15px; /* More padding for easier touch targets */
+  }
+}
 .dropdown {
   font-family: 'Barlow Semi Condensed', sans-serif; 
   font-size: 1rem; 
