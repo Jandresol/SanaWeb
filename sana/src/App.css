@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center; 
-  background-color: #e05b5b; 
+  background-color: #ff5555; 
   padding: 20px;
   color: white; 
   font-family: 'Barlow Semi Condensed', sans-serif; 
@@ -167,4 +167,101 @@ body {
 
 .data-navbar button:focus {
   outline: none; /* Remove default outline */
+}
+
+.alert-container {
+  position: fixed; /* Fixed position for pop-up */
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  z-index: 1000; /* Ensure it stays on top */
+}
+
+.alert-button {
+  background-color: #ff5555; 
+  font-family: 'Barlow Semi Condensed', sans-serif; 
+  color: white;
+  border: none; /* No border */
+  border-radius: 25px; /* Rounded corners */
+  padding: 10px 20px; /* Padding to fit the text nicely */
+  font-size: 20px; /* Size of the exclamation point */
+  cursor: pointer; /* Pointer cursor */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  transition: background-color 0.3s; /* Smooth hover effect */
+  display: flex; /* Use flex to center text */
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+}
+
+.alert-button:hover {
+  background-color: darkred; /* Darker red on hover */
+}
+
+.alert-form {
+  background-color: #f9f9f9; /* Light background for form */
+  border: 1px solid #ccc; /* Border around form */
+  border-radius: 5px; /* Rounded corners */
+  padding: 50px; /* Padding inside form */
+  margin-top: 10px; /* Spacing above form */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  position: relative; /* Position relative for close button */
+}
+
+.close-button {
+  position: absolute; /* Absolute position */
+  top: 5px; /* Position it at the top */
+  right: 5px; /* Position it at the right */
+  background: none; /* No background */
+  border: none; /* No border */
+  font-size: 20px; /* Font size for close button */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.close-button:hover {
+  color: rgb(255, 255, 255); /* Change color on hover */
+}
+
+.alert-form h2 {
+  margin-top: 0; /* Remove margin from top */
+}
+
+.alert-form div {
+  margin-bottom: 15px; /* Spacing between fields */
+}
+
+.alert-form label {
+  display: block; /* Label on new line */
+}
+
+.alert-form input, 
+.alert-form textarea {
+  width: 100%; /* Full width */
+  padding: 8px; /* Padding inside input */
+  margin: 5px;
+  border: 1px solid #ccc; /* Border */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.alert-form button {
+  background-color: #007bff; /* Button color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  padding: 10px 15px; 
+  margin: 5px;
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.alert-form button:hover {
+  background-color: #0056b3; /* Darker button color on hover */
+}
+
+.error-message {
+  color: red; /* Error message color */
+  font-weight: bold; /* Bold text */
+}
+
+.success-message {
+  color: green; 
+  font-weight: bold; /* Bold text */
 }

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Controls from '../components/Controls'; // Adjust the path based on your folder structure
-import MapContainer from '../components/MapContainer'; // Adjust the path based on your folder structure
-import DataHeader from '../components/DataHeader'; // Import the DataHeader component
+import Controls from '../components/Controls'; 
+import MapContainer from '../components/MapContainer'; 
+import DataHeader from '../components/DataHeader'; 
+import AlertForm from '../components/AlertForm.js';
 
 const ExploreData = () => {
     const [activeTab, setActiveTab] = useState('map');
@@ -25,7 +26,6 @@ const ExploreData = () => {
 
     return (
         <div className="ExploreData">
-            {/* Render DataHeader only on this page */}
             <DataHeader switchTab={switchTab} />
             <div className="content">
                 {activeTab === 'map' && (
@@ -37,8 +37,10 @@ const ExploreData = () => {
                 {activeTab === 'list' && <div>List View (Coming Soon)</div>}
                 {activeTab === 'compare' && <div>Compare Countries (Coming Soon)</div>}
             </div>
+            <AlertForm />
         </div>
     );
 };
 
 export default ExploreData;
+

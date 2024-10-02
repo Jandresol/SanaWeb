@@ -12,7 +12,9 @@ const Controls = ({ countries }) => {
             </select>
             <select id="country-select" className="dropdown">
                 <option value="">Explore a County</option>
-                {countries.map((country, index) => (
+                {countries
+                .sort((a, b) => a.localeCompare(b))
+                .map((country, index) => (
                     <option key={index} value={country}>{country}</option>
                 ))}
             </select>
