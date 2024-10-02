@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Controls = () => {
+const Controls = ({ countries }) => {
     return (
         <div className="controls">
             <select id="metric-select">
@@ -10,9 +10,9 @@ const Controls = () => {
             </select>
             <select id="country-select">
                 <option value="">Find a Country</option>
-                <option value="USA">United States</option>
-                <option value="CAN">Canada</option>
-                {/* Add more countries as needed */}
+                {countries.map((country, index) => (
+                    <option key={index} value={country}>{country}</option>
+                ))}
             </select>
             <button onClick={() => alert('Downloading data file...')}>Download Data File</button>
             <button onClick={() => alert('Downloading map image...')}>Download Map Image</button>

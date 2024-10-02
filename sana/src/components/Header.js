@@ -3,7 +3,7 @@ import React from 'react';
 const Header = ({ switchTab }) => {
     return (
         <header className="header">
-            <h1>The Cancer Atlas</h1>
+            <h1>SANA</h1>
             <nav className="navbar">
                 <ul>
                     <li><button onClick={() => switchTab('map')}>Map View</button></li>
