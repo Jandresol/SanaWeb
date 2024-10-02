@@ -1,41 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-import Controls from './components/Controls';
-import MapContainer from './components/MapContainer';
+import Home from './pages/Home';
+import RiskFactors from './pages/RiskFactors';
+import ExploreData from './pages/ExploreData';
+import About from './pages/About';
 import './App.css';
 
 function App() {
-    const [activeTab, setActiveTab] = useState('map');
-    const [countries, setCountries] = useState([]);
-
-    const switchTab = (tab) => {
-        setActiveTab(tab);
-    };
-
-    useEffect(() => {
-        // Load the JSON file with unique country names
-        fetch('/unique_countries.json')
-            .then((response) => response.json())
-            .then((data) => {
-                setCountries(data);
-            })
-            .catch((error) => {
-                console.error('Error loading JSON:', error);
-            });
-    }, []);
-
     return (
         <div className="App">
-            <Header switchTab={switchTab} />
+            <Header />
             <div className="content">
-                {activeTab === 'map' && (
-                    <>
-                        <Controls countries={countries} />
-                        <MapContainer />
-                    </>
-                )}
-                {activeTab === 'list' && <div>List View (Coming Soon)</div>}
-                {activeTab === 'compare' && <div>Compare Countries (Coming Soon)</div>}
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/risk-factors" element={<RiskFactors />} />
+                    <Route path="/explore-data" element={<ExploreData />} />
+                    <Route path="/about" element={<About />} />
+                </Routes>
             </div>
         </div>
     );

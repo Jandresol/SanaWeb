@@ -1,52 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
 .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  background-color: #e05b5b; 
   padding: 20px;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #ddd;
-}
-
-.header h1 {
+  color: white; 
+  font-family: 'Barlow Semi Condensed', sans-serif; 
   margin: 0;
 }
 
+.header h1 {
+  font-size: 3.5rem; 
+  margin: 0; 
+  text-align: center; 
+  font-weight: 800;
+}
+
 .navbar {
-  margin-top: 10px;
+  margin-top: 10px; 
 }
 
 .navbar ul {
-  list-style-type: none;
-  padding: 0;
+  list-style: none;
+  padding: 0; 
   display: flex;
-  gap: 20px;
+  gap: 15px; 
 }
 
-.navbar ul li {
+.navbar li {
   display: inline;
 }
 
-.navbar ul li button {
-  background: none;
-  border: none;
-  color: #007bff;
-  cursor: pointer;
-  font-size: 16px;
+.navbar a {
+  text-decoration: none; 
+  background-color: transparent; 
+  color: white; 
+  padding: 10px 15px; 
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  font-family: 'Barlow Semi Condensed', sans-serif; /* Consistent font */
 }
 
-.navbar ul li button:hover {
-  text-decoration: underline;
+.navbar a:hover {
+  background-color: white; /* Background changes to white on hover */
+  color: #282c34; /* Text color changes to dark on hover */
 }
 
-.content {
-  padding: 20px;
+.navbar a:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+.navbar button {
+  background-color: transparent; 
+  border: 2px solid white; /* White border */
+  color: white; /* White text color */
+  padding: 10px 15px; /* Padding for buttons */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+  font-family: 'Barlow Semi Condensed', sans-serif; /* Consistent font */
+}
+
+.navbar button:hover {
+  background-color: white; /* Background changes to white on hover */
+  color: #282c34; /* Text color changes to dark on hover */
+}
+
+.navbar button:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+
+.dropdown {
+  font-family: 'Barlow Semi Condensed', sans-serif; 
+  font-size: 1rem; 
+  background-color: #ffffff; 
+  color: #333333;
+  border: 2px solid #cccccc; 
+  border-radius: 0; 
+  padding: 8px 12px; 
+  appearance: none; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23cccccc' d='M0 2l2 2l2-2z'/%3E%3C/svg%3E"); /* Grey dropdown icon pointing down */
+  background-repeat: no-repeat;
+  background-position: right 10px center; /* Position the icon */
+  background-size: 10px; /* Adjust the icon size */
+  width: 100%; /* Ensure the dropdown is full width if needed */
+  max-width: 300px; /* Adjust max width as per design requirements */
+  cursor: pointer; /* Pointer cursor for better UX */
+}
+
+.dropdown:focus {
+  outline: none; /* Remove the default outline on focus */
+  border-color: #007bff; /* Change the border color on focus */
 }
 
 .controls {
   display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
+  flex-direction: row;
+  gap: 16px;
+  padding: 20px;
+  align-items: start;
 }
 
 .map-container {
@@ -59,4 +122,49 @@ body {
   justify-content: center;
   color: #6c757d;
   font-size: 24px;
+}
+
+.dataheader {
+  background-color: #f0f0f0; /* Light grey background for the header */
+  padding: 20px; /* Padding for the header */
+  margin: 0; /* Ensure no margin */
+}
+
+.data-navbar {
+  display: flex; 
+  justify-content: flex-start; /* Align items to the left */
+}
+
+.data-navbar ul {
+  list-style: none;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex; /* Use flexbox for horizontal layout */
+  gap: 20px; /* Space between buttons */
+}
+
+.data-navbar li {
+  display: inline; /* Keep list items in-line */
+}
+
+/* Button Styles */
+.data-navbar button {
+  background-color: transparent; /* Transparent background */
+  border: none; /* No border */
+  font-size: 1.2rem; 
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color: #4e4e4e; /* Dark grey text color */
+  padding: 10px 15px; /* Padding for buttons */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.data-navbar button:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+  color: rgb(253, 96, 96); /* Change text color to white on hover */
+}
+
+.data-navbar button:focus {
+  outline: none; /* Remove default outline */
 }
