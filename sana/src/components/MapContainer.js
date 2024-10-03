@@ -1,14 +1,16 @@
 import React from 'react';
 
 const MapContainer = () => {
-    return (
-        <div className="map-container">
-            {/* Placeholder for the map visualization */}
-            <div id="map">
-                Map Visualization Placeholder
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      <h1>San Luis Map</h1>
+      <iframe
+        title="San Luis Map"
+        src="/san_luis_heatmap.html" 
+        style={{ width: '100%', height: '500px', border: 'none'}}
+      />
+    </div>
+  );
 };
 
 export default MapContainer;

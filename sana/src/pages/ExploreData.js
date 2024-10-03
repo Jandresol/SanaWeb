@@ -27,7 +27,7 @@ const ExploreData = () => {
     return (
         <div className="ExploreData">
             <DataHeader switchTab={switchTab} />
-            <div className="content">
+            <div className="content" style={{backgroundClip: 'black'}}>
                 {activeTab === 'map' && (
                     <>
                         <Controls countries={countries} />
